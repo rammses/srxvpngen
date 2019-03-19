@@ -78,26 +78,26 @@ put the public key file using scp to switch
 If you receive what we call dev.hello as shown below everything is fine. You've established an PYez connection to junos switch
 	
 	PS C:\Python_Calisma\srxvpngen\keys> ssh -i .\srxvpngen_nopass srxvpngen@192.168.17.130 -p 830 -s netconf
-<!-- No zombies were killed during the creation of this user interface -->
-<!-- user srxvpngen, class j-super-user -->
-<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  <capabilities>
-    <capability>urn:ietf:params:netconf:base:1.0</capability>
-    <capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
-    <capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
-    <capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
-    <capability>urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file</capability>
-    <capability>urn:ietf:params:xml:ns:netconf:base:1.0</capability>
-    <capability>urn:ietf:params:xml:ns:netconf:capability:candidate:1.0</capability>
-    <capability>urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0</capability>
-    <capability>urn:ietf:params:xml:ns:netconf:capability:validate:1.0</capability>
-    <capability>urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file</capability>
-    <capability>http://xml.juniper.net/netconf/junos/1.0</capability>
-    <capability>http://xml.juniper.net/dmi/system/1.0</capability>
-  </capabilities>
-  <session-id>5222</session-id>
-</hello>
-]]>]]>
+    <!-- No zombies were killed during the creation of this user interface -->
+    <!-- user srxvpngen, class j-super-user -->
+    <hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <capabilities>
+        <capability>urn:ietf:params:netconf:base:1.0</capability>
+        <capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+        <capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+        <capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+        <capability>urn:ietf:params:netconf:capability:url:1.0?scheme=http,ftp,file</capability>
+        <capability>urn:ietf:params:xml:ns:netconf:base:1.0</capability>
+        <capability>urn:ietf:params:xml:ns:netconf:capability:candidate:1.0</capability>
+        <capability>urn:ietf:params:xml:ns:netconf:capability:confirmed-commit:1.0</capability>
+        <capability>urn:ietf:params:xml:ns:netconf:capability:validate:1.0</capability>
+        <capability>urn:ietf:params:xml:ns:netconf:capability:url:1.0?protocol=http,ftp,file</capability>
+        <capability>http://xml.juniper.net/netconf/junos/1.0</capability>
+        <capability>http://xml.juniper.net/dmi/system/1.0</capability>
+      </capabilities>
+      <session-id>5222</session-id>
+    </hello>
+    ]]>]]>
 
 
 ##Using the srxvpn.py
