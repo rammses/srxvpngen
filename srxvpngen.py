@@ -15,13 +15,9 @@ __maintainer__ = "Mesut Bayrak"
 __email__ = "mesut@mikronet.net"
 __status__ = "Beta "
 
-import sys, os,datetime,threading, requests, csv, yaml, time, argparse, secrets, string, paramiko, time, logging, yaml
+import sys, os,datetime,threading, requests, csv, yaml, time, argparse, secrets, string, paramiko, time, logging, yaml, datetime
 from jnpr.junos import Device
-from jnpr.junos.exception import ConnectError
-from jnpr.junos.factory.factory_loader import FactoryLoader
-
-
-
+from jnpr.junos.utils.config import Config
 
 def config_data():
     with open('./config.yml', 'r') as ymlfile:
@@ -30,9 +26,6 @@ def config_data():
 
 def ListTunnels(_host,_port,_username,_password,_command):
     return
-import datetime
-from jnpr.junos import Device
-from jnpr.junos.utils.config import Config
 
 def send_commands(_hostname, _port, _username, _keyfile,_commands):
     dev = Device(host=_hostname, port=_port,user=_username,
@@ -61,7 +54,6 @@ def send_commands(_hostname, _port, _username, _keyfile,_commands):
         except:
             _success = False
             return _success
-
 
 def generatedpsk(secret_length):
     stringSource = string.ascii_letters + string.digits \
@@ -182,13 +174,11 @@ def main():
     elif args.delete:
         print("delete")
         _del_tunnelname = args.delete[0]
-
         # Read credential config
         _firewall = config['Credentials']['firewall']
         _fwport = config['Credentials']['port']
         _fwuser = config['Credentials']['user']
         _fwpass = config['Credentials']['pass']
-
         delete_tunnels = ListTunnels(_firewall, _fwport, _fwuser, _fwpass, _Script_Delete_Tunnel)
         print(_firewall, _fwport, _fwuser, _fwpass, _Script_Delete_Tunnel)
         print(delete_tunnels)
@@ -199,7 +189,6 @@ def main():
         _fwport = config['Credentials']['port']
         _fwuser = config['Credentials']['user']
         _fwpass = config['Credentials']['pass']
-
         get_tunnels = ListTunnels(_firewall, _fwport, _fwuser, _fwpass, _Script_Get_Tunnels)
         # print(_firewall, _fwport, _fwuser, _fwpass, _Script_Get_Tunnels)
         print(*get_tunnels, sep='\n')

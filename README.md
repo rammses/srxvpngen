@@ -1,5 +1,7 @@
 # srxvpngen
-Creates vpn tunnels in srx devices using netconf
+Creates vpn tunnels in srx devices using netconf. Reads constants about tunnel configuration from config.yml
+creates necessary set commands in a model 
+Pushes the model into netconf ingester on device. 
 
 
 ## Dependency installations for PYez modules
