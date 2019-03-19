@@ -100,3 +100,24 @@ If you receive what we call dev.hello as shown below everything is fine. You've 
 ]]>]]>
 
 
+##Using the srxvpn.py
+It has 3 switches
+### Create
+It takes 6 paramaters as explained below
+                                                                                               
+     #python srxvpngen.py -C test243 ge-0/0/0 123.123.123.123 192.168.17.0/24 192.168.36.0/24 135 
+                           | |       |        |               |               |               |   
+                           | |       |        |               |               |               ---- Tunnel Number
+                           | |       |        |               |               -------------------- Destination Network
+                           | |       |        |               ------------------------------------ Source Network
+                           | |       |        ---------------------------------------------------- Destination endpoint
+                           | |       ------------------------------------------------------------- Source interface
+                           | --------------------------------------------------------------------- Tunnel Name
+                           ----------------------------------------------------------------------- create switch
+    
+### List
+It takes no parameters just shows configured vpn tunnels
+
+### Delete
+It takes one parameter 
+    python srxvpngen.py -D tunnel_name
