@@ -100,7 +100,7 @@ If you receive what we call dev.hello as shown below everything is fine. You've 
     ]]>]]>
 
 
-##Using the srxvpn.py
+## Using the srxvpngen.py
 It has 3 switches
 ### Create
 It takes 6 paramaters as explained below
