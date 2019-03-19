@@ -1,0 +1,29 @@
+credentials :
+  firewall: '192.168.17.130'
+  port: '830'
+  keyfile: './keys/srxvpngen_nopass'
+  user: 'srxvpngen'
+  pass: '12qwasZX'
+
+#ike
+Ike-Policy:
+  mode : 'main'
+  prop-set : 'standard'
+  Key-Len : '16'
+
+Ike-Gw:
+  dpd : 'True'
+
+#ipsec
+Ipsec-pol:
+  pfs : 'keys group5'
+  prop-set : 'standard'
+
+Ipsec-Vpn:
+  vpn-monitor : 'True'
+  estab-tun : 'immediately'
+
+# Firewall
+Firewall:
+  zone : 'internal'
+
